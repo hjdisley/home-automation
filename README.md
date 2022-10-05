@@ -84,7 +84,7 @@ If a device with the given id already exists, that device will be overwritten
 
 **Definition**
 
-`DELETE /devices/<id>`
+`DELETE /device/<id>`
 
 **Response**
 
