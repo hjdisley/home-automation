@@ -1,7 +1,8 @@
+from calendar import c
 from flask import Flask
 import markdown
 import os
-from flask_restful import Api
+from flask_restful import Api, Resource
 
 # Create and instance of Flask
 app = Flask(__name__)
@@ -16,3 +17,9 @@ def index():
         content = markdown_file.read()
         
         return markdown.markdown(content)
+
+class HelloWorld(Resource):
+    def get(self):
+        return {"Hello": "World"}
+
+api.add_resource(HelloWorld, '/hello')
