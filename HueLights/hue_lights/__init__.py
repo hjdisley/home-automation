@@ -19,6 +19,7 @@ def index():
         return markdown.markdown(content)
 
 class HelloWorld(Resource):
+    #TODO: Add a get method
     def get(self):
         return {"Hello": "World"}
 
